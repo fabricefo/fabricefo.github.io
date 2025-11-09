@@ -3,9 +3,10 @@ name: 'My Blog'
 description: 'My Blog with some posts.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/'
+baseurl: ''
+url: 'https://fabricefo.github.io'
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+email: 'ffoure@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -28,12 +29,12 @@ authors:
       twitter:        https://twitter.com/wowthemesnet
 
     jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
+      name:           Fabrice
+      site:           https://www.fabricefourel.com
       avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "CTO and tech enthousiast!!"
+      email:          ffourel@gmail.com
+      twitter:        https://twitter.com/fabricefourel
  
 # Defaults
 defaults:
