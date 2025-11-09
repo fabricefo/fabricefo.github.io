@@ -1,35 +1,13 @@
 # My Blog with Github Pages and Jekyll
 
-**Les articles de ce blog sont générés automatiquement avec les prompts ci-dessous dans un workflow d'agents.**
+## Installation
 
-1. Recherche de sujets d'articles
+- Installer Jekyll avec Ruby (voir https://jekyllrb.com/docs/installation/) > tester avec ```jekyll -v```
+- Si besoin lancer ```bundler update```
+- Puis tester le site avec ```bundle exec jekyll serve```
+- Aller sur l'adresse http://127.0.0.1:4000
+  
 
-Consignes : Mettez-vous dans la peau d'un rédacteur web expérimenté, spécialisé dans [sujet]. Votre mission consiste à trouver des idées d'articles innovantes et captivantes, capables d'attirer et de maintenir l'intérêt du public. Ces idées doivent être informatives et pertinentes par rapport aux tendances actuelles de [sujet], tout en encourageant l'interaction et le partage entre les lecteurs. Explorez différentes pistes : guides pratiques, interviews d'experts, articles d'opinion, listes, etc. Chaque idée doit être accompagnée d'une brève explication de son potentiel et de la manière dont elle pourrait être développée pour optimiser l'engagement des lecteurs. Privilégiez l'originalité et la capacité à susciter des discussions ou à apporter un éclairage nouveau sur [sujet].
+## Contenu
 
-2. Collecte d'informations et de sources
-
-Consignes : Mettez-vous dans la peau d'un rédacteur de blog expérimenté. Votre mission consiste à rassembler des informations complètes et des sources crédibles pour un article de blog sur [sujet]. Cela implique de mener des recherches approfondies afin de garantir un contenu non seulement captivant, mais aussi informatif et précis. Vous devrez identifier les points clés, les statistiques pertinentes, les avis d'experts et les études ou développements récents liés au sujet. De plus, il sera essentiel de trouver des exemples illustratifs ou des études de cas permettant de clarifier les points complexes ou d'approfondir la discussion. Vos recherches doivent viser à fournir une base solide pour un article de blog répondant aux besoins et aux intérêts du public cible, en lui apportant valeur ajoutée et éclairages. Assurez-vous que toutes les sources sont fiables et citez-les correctement dans vos données collectées afin de garantir la crédibilité de vos sources et d'encourager la lecture.
-
-3. Rédiger une méta-description
-
-Consignes : Mettez-vous dans la peau d’un rédacteur web expérimenté, spécialisé en SEO. Votre mission consiste à rédiger une méta-description percutante et optimisée pour le référencement naturel d’un article de blog, en vous basant sur le titre fourni. Cette méta-description doit résumer efficacement le contenu de l’article tout en intégrant des mots-clés pertinents pour améliorer son positionnement dans les moteurs de recherche. Elle doit être concise, attrayante et limitée à 160 caractères afin de s’afficher correctement dans les résultats de recherche. Votre objectif est d’inciter les lecteurs à cliquer pour lire l’article complet en mettant en avant sa valeur et sa pertinence par rapport à leurs centres d’intérêt ou leurs besoins.
-
-4. Créer un plan détaillé
-
-Consignes : Mettez-vous dans la peau d’un rédacteur web expérimenté chargé de créer un plan percutant et informatif pour un article de blog sur [sujet]. Ce plan doit structurer l’article de manière à optimiser l’engagement et la fidélisation du lecteur. Commencez par une introduction accrocheuse qui présente clairement le problème ou la question abordée. Poursuivez avec une série de sections qui décomposent le sujet en parties digestes, chacune apportant des informations, des données ou des anecdotes pertinentes pour étayer l’argument principal ou le thème de l’article. Assurez-vous que chaque section s’enchaîne logiquement à la suivante, afin de maintenir l’intérêt du lecteur. Incluez une conclusion qui résume les points clés abordés tout au long de l’article et qui invite le lecteur à agir ou à se poser une question qui suscite la réflexion. N’oubliez pas d’intégrer les bonnes pratiques SEO tout au long du plan afin d’améliorer la visibilité et la portée de l’article.
-
-5. Rédiger l'article complet
-
-Consignes : Incarnez un rédacteur web expérimenté et rédigez un article de [n] mots à partir du [plan] fourni. Votre mission consiste à développer ce plan pour créer un article captivant, informatif et engageant, qui trouve un écho auprès de votre public cible. Veillez à ce que l'article soit bien structuré, avec une introduction, un développement et une conclusion clairs. Optimisez le contenu pour les moteurs de recherche en utilisant les meilleures pratiques SEO et en intégrant des mots-clés pertinents sans nuire à la fluidité et à la lisibilité du texte. L'article doit apporter une réelle valeur ajoutée aux lecteurs, les incitant à le partager et à revenir pour découvrir d'autres contenus. Soignez votre grammaire, votre ponctuation et votre style afin de garantir un haut niveau de professionnalisme tout au long de l'article.
-
-6. Révision pour plus de clarté et de cohérence
-
-Consignes : Mettez-vous dans la peau d’un rédacteur de blog expérimenté. Votre tâche consiste à réviser minutieusement le [article de blog] afin d’en améliorer la clarté et la cohérence. Ce travail de révision implique d’affiner la structure du contenu, d’assurer une transition logique entre les paragraphes et d’améliorer la lisibilité. Veillez à éliminer toute ambiguïté ou redondance dans le texte et à simplifier les phrases complexes pour une meilleure compréhension. Par ailleurs, portez une attention particulière à la grammaire, à la ponctuation et au style afin d’optimiser la qualité globale de l’article. Votre objectif est de produire un contenu soigné, captivant et facile à lire qui trouve un écho auprès du public cible et le captive du début à la fin.
-
-7. Améliorer la structure des phrases et le choix des mots
-
-Consignes : Mettez-vous dans la peau d’un rédacteur web expérimenté. Votre tâche consiste à examiner et à améliorer minutieusement la structure des phrases du texte fourni. L’objectif est d’en améliorer la lisibilité, la fluidité et l’impact, afin de rendre le texte captivant pour le public cible. Veillez à varier la longueur des phrases, à utiliser la voix active et à intégrer des transitions fluides. De plus, assurez-vous que le texte révisé conserve, voire renforce, le ton et le message d’origine, le rendant ainsi plus attrayant et accessible aux lecteurs. Votre capacité à rédiger des phrases concises et percutantes sera essentielle pour rehausser la qualité globale de l’article.
-
-8. Suggestions d'emplacement pour les images
-
-Consignes : Mettez-vous dans la peau d'un rédacteur web expérimenté, capable d'optimiser l'engagement du lecteur grâce aux visuels. Votre mission consiste à analyser minutieusement la structure de l'article fourni, en identifiant les sections clés où des images ou des visuels permettraient d'améliorer significativement la compréhension, l'intérêt et la mémorisation du lecteur. Votre analyse doit prendre en compte la fluidité du contenu, les points importants et toute information complexe pouvant être simplifiée ou mise en valeur par des images. Proposez des types d'images ou de visuels spécifiques (infographies, graphiques, photos, diagrammes, etc.) en adéquation avec le contenu et le ton de l'article. Fournissez également de brèves explications pour chaque suggestion, en détaillant comment les visuels compléteraient le texte et enrichiraient l'expérience de lecture. Votre objectif : créer un article visuellement attrayant et informatif qui se démarque et captive l'attention du lecteur du début à la fin.
+**Les articles de ce blog sont parfois générés automatiquement avec des prompts dans un workflow d'agents.**
