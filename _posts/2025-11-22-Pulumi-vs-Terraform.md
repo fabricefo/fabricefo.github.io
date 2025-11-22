@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Pulumi vs Terraform: Le Guide Ultime pour Choisir Votre IaC"
 description: "Découvrez les différences clés entre Pulumi et Terraform pour l'Infrastructure as Code. Ce guide complet vous aide à choisir l'outil IaC idéal pour vos projets DevOps et cloud."
@@ -150,4 +149,3 @@ Terraform, avec son langage déclaratif HCL et son écosystème mature, reste un
 L'avenir de l'IaC verra probablement une convergence des fonctionnalités et une importance croissante de la sécurité et de la gouvernance. La meilleure approche est de rester informé, d'expérimenter et d'adapter vos outils à l'évolution de vos besoins.
 
 Alors, quel champion de l'IaC choisirez-vous pour votre prochaine aventure cloud ? Testez les deux outils sur un projet pilote, évaluez vos besoins réels, et partagez votre expérience avec la communauté !
-```
