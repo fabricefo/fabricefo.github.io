@@ -23,7 +23,7 @@ authors:
     fabrice:
       name:           Fabrice
       site:           https://www.fabricefourel.com
-      avatar:         /assets/images/avatar.png
+      avatar:         assets/images/avatar.png
       bio:            "CTO and Tech enthousiast!!"
       email:          ffourel@gmail.com
       twitter:        https://twitter.com/fabricefourel
