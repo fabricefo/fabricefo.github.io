@@ -4,8 +4,10 @@ title: "Premiers pas avec Spring AI : Guide complet pour débutants"
 description: "Découvrez un guide complet pour débuter avec Spring AI, le framework essentiel pour intégrer l'IA dans vos applications Java."
 keywords: "Spring AI, Guide complet, Meilleures pratiques, IA générative, Développement Java"
 categories: dev
+author: fabrice
 tags: [Spring AI, IA générative, développement Java, guide débutant, meilleures pratiques]
 image: assets/images/premiers-pas-avec-spring-ai.jpg
+comment: false
 ---
 
 L’intelligence artificielle générative transforme le développement logiciel, et Spring AI s’impose comme un framework innovant pour intégrer ces capacités dans les applications Java. Basé sur les principes éprouvés de l’écosystème Spring, Spring AI facilite la création d’applications intelligentes, modulaires et évolutives. Ce guide complet vous accompagne dans vos premiers pas avec Spring AI, en expliquant ses concepts clés, ses avantages, ses défis, et en vous proposant un exemple concret pour démarrer rapidement.

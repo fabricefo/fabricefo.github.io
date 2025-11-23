@@ -4,6 +4,7 @@ title:  "La Bonne Gestion en Ingénierie est une Mode Passagère"
 author: fabrice
 categories: [ management ]
 image: assets/images/7.jpg
+comment: false
 ---
 ## La « Bonne Gestion en Ingénierie » Est-elle Une Mode Cyclique ? Le Point de Vue de Will Larson
 

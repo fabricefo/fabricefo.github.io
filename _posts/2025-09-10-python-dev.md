@@ -4,6 +4,7 @@ title:  "Python, uv et Docker"
 author: fabrice
 categories: [ dev ]
 image: assets/images/1.jpg
+comment: false
 ---
 
 # 🚀 Construire un backend Python scalable avec FastAPI, Docker et uv

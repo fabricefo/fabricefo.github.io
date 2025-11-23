@@ -4,6 +4,8 @@ title:  "Choisir son cloud public"
 author: fabrice
 categories: [ cloud ]
 image: assets/images/2.jpg
+tags: featured
+comment: false
 ---
 
 # 🌩️ AWS, Azure ou Google Cloud : comment choisir le bon fournisseur pour ton projet ?

@@ -4,6 +4,7 @@ title:  "Les anti-patterns Devops"
 author: fabrice
 categories: [ dev ]
 image: assets/images/4.jpg
+comment: false
 ---
 # 🌩️ La culture et organisation : clés du succès pour éviter les anti-patterns DevOps
 
