@@ -14,7 +14,7 @@ Dans le développement d’applications modernes, le backend est le cœur qui g�
 
 Python est reconnu pour sa simplicité et sa lisibilité, ce qui en fait un langage de script très apprécié pour le développement backend. Ses frameworks phares comme Django, Flask et FastAPI permettent de créer rapidement des applications web et des API performantes. Java, quant à lui, est un langage orienté objet, typé statiquement et compilé, réputé pour sa robustesse et ses performances. Spring Boot est son framework le plus utilisé en entreprise, garantissant stabilité et évolutivité.
 
-En 2024, Python et Java figurent parmi les langages backend les plus demandés. Python séduit particulièrement les startups et projets agiles grâce à son écosystème riche et son rôle clé dans l’intelligence artificielle (IA). Java reste la référence dans les grandes entreprises et les systèmes critiques, grâce à sa maturité et sa fiabilité éprouvée.
+Python et Java figurent parmi les langages backend les plus demandés. Python séduit particulièrement les startups et projets agiles grâce à son écosystème riche et son rôle clé dans l’intelligence artificielle (IA). Java reste la référence dans les grandes entreprises et les systèmes critiques, grâce à sa maturité et sa fiabilité éprouvée.
 
 ## 💡 Principaux avantages des backend Python et Java
 
