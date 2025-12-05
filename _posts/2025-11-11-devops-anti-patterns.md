@@ -2,7 +2,7 @@
 layout: post
 title:  "Les anti-patterns Devops"
 author: fabrice
-categories: [ dev ]
+categories: [ iac ]
 image: assets/images/4.jpg
 comment: false
 ---
