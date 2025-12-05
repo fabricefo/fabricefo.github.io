@@ -22,7 +22,7 @@ Terraform est un outil puissant pour gérer l’infrastructure cloud via du code
 
 Cette organisation permet d’automatiser et de standardiser les déploiements, tout en gardant une grande flexibilité.
 
-## 📌 Les avantages clés de Terragrunt en 2024
+## 📌 Les avantages clés de Terragrunt
 
 ### Réduction de la duplication de code
 
