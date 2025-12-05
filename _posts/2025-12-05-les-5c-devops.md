@@ -4,7 +4,7 @@ title: "Les 5C DevOps : Comment maîtriser l'essentiel pour réussir"
 author: fabrice  
 description: "Découvrez les 5C DevOps essentiels pour optimiser vos cycles de développement avec les meilleures pratiques et conseils pratiques."  
 tags: [DevOps, CI/CD, Automatisation, DevSecOps, Collaboration]  
-categories: dev  
+categories: iac  
 image: assets/images/les-5c-devops.jpg  
 ---
 
