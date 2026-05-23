@@ -5,7 +5,7 @@ author: fabrice
 description: "Apprenez à créer une équipe d’agents avec Hermes Agent : cadrage des rôles, orchestration des tâches, gouvernance et exemples concrets pour passer à l’action."
 tags: [Hermes Agent, IA agentique, multi-agent, orchestration, productivité]
 categories: ai
-image: assets/images/creer-une-equipe-avec-hermes-agent.jpg
+image: assets/images/creer-une-equipe-avec-hermes-agent-750x500.jpg
 ---
 
 L’IA agentique change profondément la manière dont on conçoit l’automatisation. Pendant longtemps, on a cherché “le bon assistant” capable de tout faire. En pratique, les projets sérieux montrent autre chose : un seul agent généraliste atteint vite ses limites dès que la tâche demande de la spécialisation, de la revue, du contrôle qualité ou de la coordination.
