@@ -119,7 +119,7 @@ Il ne faut pas non plus confondre précision et accumulation. Une spécification
 
 L’adoption peut rester légère. Une première expérience peut se limiter à une fonctionnalité bien délimitée, quelques critères d’acceptation observables et une revue explicite des ambiguïtés avant l’écriture du code.
 
-Cette discipline complète bien les outils comme [GitHub Spec Kit](/2026/04/26/vibecoding-avec-github-spec-kit/), mais elle ne dépend pas d’un framework précis. L’important est de conserver le contrat avec le projet et de le confronter au résultat réel. Le troisième épisode détaillera le mode opératoire complet.
+Cette discipline complète bien les outils comme [GitHub Spec Kit](/vibecoding-avec-github-spec-kit/), mais elle ne dépend pas d’un framework précis. L’important est de conserver le contrat avec le projet et de le confronter au résultat réel. Le troisième épisode détaillera le mode opératoire complet.
 
 ## ✅ La vitesse utile vient de l’alignement
 
@@ -129,4 +129,4 @@ Avec des agents IA, le goulot d’étranglement se déplace : produire une impl�
 
 La spécification n’est donc pas une couche documentaire ajoutée après le travail. Elle est l’interface entre l’intention humaine et l’exécution automatisée. Et plus l’agent gagne en autonomie, plus ce contrat doit être explicite.
 
-Dans le [prochain article](/2026/09/13/spec-first-spec-anchored-spec-as-source/), nous comparerons les trois niveaux proposés par le SDD : **spec-first**, **spec-anchored** et **spec-as-source**.
+Dans le [prochain article](/spec-first-spec-anchored-spec-as-source/), nous comparerons les trois niveaux proposés par le SDD : **spec-first**, **spec-anchored** et **spec-as-source**.

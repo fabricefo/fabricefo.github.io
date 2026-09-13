@@ -9,7 +9,7 @@ image: /assets/images/workflow-sdd-agents-ia.jpg
 
 Le Spec-Driven Development devient utile lorsqu’il modifie concrètement la façon de livrer une fonctionnalité. Écrire une spécification puis la ranger dans un dossier ne suffit pas : chaque étape doit produire un artefact qui guide la suivante et permet de détecter les écarts.
 
-Le workflow proposé dans ce [rapport technique sur le SDD](https://arxiv.org/html/2602.00180v1) tient en quatre verbes : **Specify, Plan, Implement, Validate**. Il sépare l’intention, les choix techniques, la réalisation et la preuve de conformité. Après avoir vu [pourquoi la spécification devient centrale](/2026/09/13/spec-driven-development-agents-ia/) et [comment choisir son niveau de SDD](/2026/09/13/spec-first-spec-anchored-spec-as-source/), passons à l’exécution.
+Le workflow proposé dans ce [rapport technique sur le SDD](https://arxiv.org/html/2602.00180v1) tient en quatre verbes : **Specify, Plan, Implement, Validate**. Il sépare l’intention, les choix techniques, la réalisation et la preuve de conformité. Après avoir vu [pourquoi la spécification devient centrale](/spec-driven-development-agents-ia/) et [comment choisir son niveau de SDD](/spec-first-spec-anchored-spec-as-source/), passons à l’exécution.
 
 Voici comment l’appliquer avec une équipe humaine et des agents IA.
 

@@ -155,4 +155,4 @@ Une spécification ambitieuse mais abandonnée vaut moins qu’un contrat simple
 
 Le bon niveau de SDD est donc celui que l’équipe peut faire vivre : assez autoritaire pour limiter la dérive, assez léger pour ne pas être contourné, et assez vérifiable pour guider aussi bien les humains que les agents IA.
 
-Dans le [troisième article](/2026/09/13/workflow-sdd-agents-ia/), nous passerons de ce choix à l’exécution avec un workflow concret en quatre phases : **Specify, Plan, Implement, Validate**.
+Dans le [troisième article](/workflow-sdd-agents-ia/), nous passerons de ce choix à l’exécution avec un workflow concret en quatre phases : **Specify, Plan, Implement, Validate**.
