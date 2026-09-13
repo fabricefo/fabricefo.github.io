@@ -4,12 +4,14 @@ title: "Mettre le Spec-Driven Development en pratique avec des agents IA"
 date: 2026-09-13 07:10:00 +0200
 categories: [Développement]
 tags: [SDD, agents IA, workflow, tests logiciels, ingénierie logicielle]
-image: /assets/images/workflow-sdd-agents-ia.jpg
+image: assets/images/workflow-sdd-agents-ia.jpg
 ---
 
 Le Spec-Driven Development devient utile lorsqu’il modifie concrètement la façon de livrer une fonctionnalité. Écrire une spécification puis la ranger dans un dossier ne suffit pas : chaque étape doit produire un artefact qui guide la suivante et permet de détecter les écarts.
 
-Le workflow proposé dans ce [rapport technique sur le SDD](https://arxiv.org/html/2602.00180v1) tient en quatre verbes : **Specify, Plan, Implement, Validate**. Il sépare l’intention, les choix techniques, la réalisation et la preuve de conformité. Après avoir vu [pourquoi la spécification devient centrale](/spec-driven-development-agents-ia/) et [comment choisir son niveau de SDD](/spec-first-spec-anchored-spec-as-source/), passons à l’exécution.
+Le workflow proposé dans ce [rapport technique sur le SDD](https://arxiv.org/html/2602.00180v1) tient en quatre verbes : **Specify, Plan, Implement, Validate**. Il sépare l’intention, les choix techniques, la réalisation et la preuve de conformité. Après avoir vu [pourquoi la spécification devient centrale](/spec-driven-development-agents-ia/) et [comment choisir son approche de SDD](/spec-first-spec-anchored-spec-as-source/), passons à l’exécution.
+
+Les consignes aux agents, la structure de dépôt, les points de contrôle, les indicateurs et le calendrier proposés ci-dessous prolongent ce cadre : ce sont des recommandations opérationnelles pour le mettre à l’essai, pas un protocole imposé par le rapport.
 
 Voici comment l’appliquer avec une équipe humaine et des agents IA.
 
@@ -19,7 +21,7 @@ Voici comment l’appliquer avec une équipe humaine et des agents IA.
 
 La première phase décrit le comportement attendu, pas la manière de le programmer.
 
-Prenons comme fil rouge une fonctionnalité de réinitialisation de mot de passe. Une demande insuffisante serait :
+Reprenons le cas esquissé dans le premier article et déroulons-le de bout en bout : une fonctionnalité de réinitialisation de mot de passe. Une demande insuffisante serait :
 
 > Ajouter « mot de passe oublié ».
 
@@ -34,7 +36,7 @@ Permettre à un utilisateur de demander un lien sécurisé afin de choisir un no
 - la réponse publique est identique, que l’adresse existe ou non ;
 - un jeton expire après 30 minutes ;
 - un jeton ne peut être utilisé qu’une fois ;
-- une nouvelle demande invalide les précédents jetons actifs ;
+- une nouvelle demande invalide tous les jetons actifs précédemment émis ;
 - le nouveau mot de passe respecte la politique de sécurité ;
 - le changement invalide toutes les sessions actives du compte ;
 - la fréquence des demandes est limitée par compte et par adresse IP ;
@@ -43,6 +45,7 @@ Permettre à un utilisateur de demander un lien sécurisé afin de choisir un no
 ### Scénario d’acceptation
 
 ```gherkin
+# language: fr
 Étant donné un utilisateur disposant d'un jeton valide
 Quand il soumet un nouveau mot de passe conforme
 Alors le mot de passe du compte est remplacé
@@ -53,7 +56,7 @@ Et le jeton devient immédiatement inutilisable
 
 Une consigne efficace serait :
 
-> Analyse cette spécification comme un reviewer sécurité. Liste uniquement les décisions manquantes et les scénarios non couverts. N’invente pas les réponses.
+> Analyse cette spécification comme un spécialiste sécurité. Liste uniquement les décisions manquantes et les scénarios non couverts. N’invente pas les réponses.
 
 L’humain reste responsable des arbitrages. L’agent aide à voir ce qui manque.
 
@@ -63,7 +66,7 @@ La phase de planification traduit le « quoi » en « comment ». Elle décrit l
 
 Pour notre exemple, le plan peut couvrir :
 
-- les endpoints de demande et de confirmation ;
+- les routes d’API de demande et de confirmation ;
 - le format et le hachage du jeton ;
 - la table ou collection de stockage ;
 - le service d’envoi d’email ;
@@ -81,7 +84,7 @@ Demandez ensuite à l’agent de proposer un plan **sans modifier le code** :
 
 > À partir de la spécification et des conventions du dépôt, propose un plan par petits incréments. Pour chaque étape, indique les fichiers concernés, les tests attendus et le critère d’acceptation couvert. Signale toute hypothèse.
 
-La revue humaine valide le plan avant l’exécution. Corriger une mauvaise direction à ce stade coûte beaucoup moins cher qu’après plusieurs centaines de lignes générées.
+La revue humaine valide le plan avant l’exécution. Corriger une mauvaise direction à ce stade coûte beaucoup moins cher qu’après l’implémentation.
 
 ## 3️⃣ Implement : avancer par incréments vérifiables
 
@@ -90,13 +93,13 @@ L’implémentation ne devrait pas être confiée en un seul bloc avec la consig
 Découpez le plan en tâches qui produisent chacune un résultat testable. Par exemple :
 
 1. créer le modèle de jeton et ses tests ;
-2. implémenter la demande avec une réponse non révélatrice ;
+2. implémenter la demande avec une réponse qui ne révèle pas l’existence du compte ;
 3. intégrer l’envoi d’email derrière une interface ;
 4. implémenter la consommation atomique du jeton ;
 5. ajouter la limitation de débit et la journalisation ;
 6. exécuter les scénarios d’acceptation complets.
 
-Pour chaque tâche, l’agent reçoit seulement le contexte utile : la partie concernée de la spécification, le plan validé, les conventions du module et les tests existants.
+Pour chaque tâche, l’agent reçoit un contexte ciblé mais suffisant : la partie concernée de la spécification, le plan validé, les conventions transverses, les interfaces voisines et les tests existants.
 
 Cette réduction du bruit améliore la précision et limite les modifications hors périmètre.
 
@@ -127,7 +130,7 @@ Selon le projet, la chaîne peut inclure :
 - tests d’intégration avec la base et le service d’email ;
 - scénarios BDD ;
 - tests de contrat API ;
-- analyse statique et lint ;
+- analyse statique et vérification du style du code ;
 - détection de secrets et audit des dépendances ;
 - tests de performance ou de sécurité ciblés.
 
@@ -146,20 +149,20 @@ Lorsque le résultat ne correspond pas au contrat, il faut identifier la bonne c
 
 Si l’implémentation est fautive, on corrige le code. Si la spécification était incomplète ou erronée, on la révise, puis on adapte les tests et le code. Ce choix explicite empêche de maquiller un écart en changeant silencieusement le document après coup.
 
-## 🔁 Installer des checkpoints plutôt qu’une surveillance continue
+## 🔁 Installer des points de contrôle plutôt qu’une surveillance continue
 
 Un agent autonome n’a pas besoin d’une validation humaine après chaque ligne. Il a besoin de frontières claires où il doit s’arrêter et présenter une preuve.
 
-Les checkpoints les plus utiles sont :
+Les points de contrôle les plus utiles sont :
 
 - après l’analyse de la spécification ;
 - avant l’approbation du plan ;
 - après chaque incrément fonctionnel ;
 - avant toute migration ou changement irréversible ;
 - après l’exécution des tests ;
-- avant le merge ou le déploiement.
+- avant la fusion ou le déploiement.
 
-À chaque checkpoint, l’agent doit fournir des éléments vérifiables : diff, résultats de tests, liste des hypothèses, exigences couvertes et écarts connus.
+À chaque point de contrôle, l’agent doit fournir des éléments vérifiables : diff, résultats de tests, liste des hypothèses, exigences couvertes et écarts connus.
 
 L’autonomie ne signifie pas l’absence de contrôle. Elle signifie que le contrôle est placé aux bons endroits.
 
@@ -194,9 +197,9 @@ Comparez ces résultats à des fonctionnalités de taille similaire développée
 
 Si la spécification prend beaucoup de temps sans réduire les reprises, elle est peut-être trop détaillée ou mal ciblée. Si les agents livrent plus vite mais que les écarts augmentent, les critères ne sont probablement pas assez vérifiables.
 
-## 🚀 Un pilote en deux semaines
+## 🚀 Exemple de pilote sur deux semaines
 
-Pour tester la méthode sans transformer toute l’organisation :
+La durée n’est pas prescrite par le rapport ; voici une proposition pratique pour tester la méthode sans transformer toute l’organisation :
 
 1. choisissez une fonctionnalité limitée mais réellement utile ;
 2. désignez un responsable de la spécification ;
@@ -204,7 +207,7 @@ Pour tester la méthode sans transformer toute l’organisation :
 4. faites challenger les ambiguïtés par un agent ;
 5. validez un plan avant toute modification ;
 6. implémentez en petits incréments ;
-7. exigez des preuves de test à chaque checkpoint ;
+7. exigez des résultats de tests vérifiables à chaque point de contrôle ;
 8. mesurez les reprises et les écarts ;
 9. décidez ensuite si le périmètre doit rester spec-first ou devenir spec-anchored.
 

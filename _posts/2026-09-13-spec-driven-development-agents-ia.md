@@ -4,7 +4,7 @@ title: "Spec-Driven Development : pourquoi les agents IA ont besoin de contrats,
 date: 2026-09-13 07:00:00 +0200
 categories: [Développement]
 tags: [IA, développement, SDD, agents IA, qualité logicielle]
-image: /assets/images/spec-driven-development-agents-ia.jpg
+image: assets/images/spec-driven-development-agents-ia.jpg
 ---
 
 Les assistants de code savent produire vite. Très vite. Mais ils ne savent pas spontanément ce que votre produit doit garantir, quelles règles métier sont intouchables, ni quels compromis d’architecture votre équipe a déjà tranchés.
@@ -40,7 +40,7 @@ Une bonne spécification décrit d’abord **ce que le logiciel doit faire**, sa
 - les entrées et sorties importantes ;
 - les règles métier ;
 - les critères d’acceptation ;
-- les cas limites ;
+- les cas aux limites ;
 - les erreurs attendues ;
 - les exigences non fonctionnelles réellement déterminantes.
 
@@ -50,11 +50,11 @@ Prenons une demande simple : « permettre à un utilisateur de réinitialiser so
 
 Ces éléments ne sont pas des détails de code. Ce sont les propriétés du produit que le code devra respecter.
 
-## 🧭 Du prompt ponctuel à la chaîne de responsabilité
+## 🧭 Du prompt ponctuel à une chaîne d’artefacts vérifiables
 
 Le workflow présenté dans le rapport suit quatre étapes : **Specify → Plan → Implement → Validate**.
 
-Chacune produit un artefact qui contraint la suivante :
+Chaque phase produit un artefact qui guide la suivante, sans former une cascade rigide : le plan peut révéler une lacune de la spécification et la validation peut conduire à reprendre les phases précédentes.
 
 1. **Specify** définit le comportement attendu.
 2. **Plan** transforme cette intention en choix d’architecture, interfaces et contraintes techniques.
@@ -63,7 +63,7 @@ Chacune produit un artefact qui contraint la suivante :
 
 Cette chaîne est essentielle avec des agents IA. Elle évite de concentrer toute l’intention dans une conversation temporaire que personne ne relira ensuite.
 
-La spécification devient une sorte de **super-prompt**. Conservée dans le dépôt, elle peut être relue par un métier, exploitée par un agent, transformée en tests et utilisée lors de la revue de code.
+La spécification devient une sorte de **super-prompt**. Conservée dans le dépôt, elle peut être relue par un représentant métier, exploitée par un agent, transformée en tests et utilisée lors de la revue de code.
 
 ## 🎯 Pourquoi les agents deviennent meilleurs avec une spécification
 
@@ -123,10 +123,10 @@ Cette discipline complète bien les outils comme [GitHub Spec Kit](/vibecoding-a
 
 ## ✅ La vitesse utile vient de l’alignement
 
-Le SDD ne cherche pas à ralentir la génération de code. Il cherche à éviter d’accélérer dans la mauvaise direction.
+Le SDD ne cherche pas à ralentir la génération de code. Il vise à réduire les reprises provoquées par une intention mal comprise.
 
 Avec des agents IA, le goulot d’étranglement se déplace : produire une implémentation devient moins coûteux, tandis que formuler une intention non ambiguë et vérifier le résultat deviennent plus importants.
 
 La spécification n’est donc pas une couche documentaire ajoutée après le travail. Elle est l’interface entre l’intention humaine et l’exécution automatisée. Et plus l’agent gagne en autonomie, plus ce contrat doit être explicite.
 
-Dans le [prochain article](/spec-first-spec-anchored-spec-as-source/), nous comparerons les trois niveaux proposés par le SDD : **spec-first**, **spec-anchored** et **spec-as-source**.
+Dans le [prochain article](/spec-first-spec-anchored-spec-as-source/), nous comparerons les trois approches proposées par le SDD : **spec-first**, **spec-anchored** et **spec-as-source**.

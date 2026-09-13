@@ -1,31 +1,33 @@
 ---
 layout: post
-title: "Spec-first, spec-anchored ou spec-as-source : quel niveau de SDD choisir ?"
+title: "Spec-first, spec-anchored ou spec-as-source : quelle approche de SDD choisir ?"
 date: 2026-09-13 07:05:00 +0200
 categories: [Développement]
 tags: [SDD, architecture logicielle, IA, documentation, qualité logicielle]
-image: /assets/images/spec-first-spec-anchored-spec-as-source.jpg
+image: assets/images/spec-first-spec-anchored-spec-as-source.jpg
 ---
 
-Adopter le Spec-Driven Development ne signifie pas nécessairement générer toute une application depuis un document formel. Entre le prompt improvisé et la spécification érigée en source unique, plusieurs niveaux de discipline sont possibles.
+Adopter le Spec-Driven Development ne signifie pas nécessairement générer toute une application depuis un document formel. Entre le prompt improvisé et la spécification érigée en source unique, plusieurs modes d’autorité sont possibles.
 
 Le [rapport technique sur le Spec-Driven Development](https://arxiv.org/html/2602.00180v1) distingue trois approches : **spec-first**, **spec-anchored** et **spec-as-source**. Elles ne constituent pas une simple échelle de maturité où le niveau le plus avancé serait toujours préférable. Chacune répond à un contexte, un coût de maintenance et un besoin de contrôle différents.
 
+Les exemples et critères de choix qui suivent constituent une lecture pratique de ce cadre, et non des prescriptions directement formulées par le rapport.
+
 <!-- Image: https://commons.wikimedia.org/wiki/File:Escalators_at_Auber_RER_station_in_Paris,_recently_renovated,_with_clean_and_modern_underground_architecture.jpg | CC0 -->
 
-## 🗺️ Trois niveaux d’autorité de la spécification
+## 🗺️ Trois modes d’autorité de la spécification
 
 Pour choisir, il faut identifier **l’artefact qui fait autorité lorsque le comportement évolue**.
 
-| Approche | Rôle de la spécification | Source de vérité après livraison | Effort continu | Contexte privilégié |
+| Approche | Rôle de la spécification | Artefact faisant autorité après livraison | Effort continu | Contexte privilégié |
 |---|---|---|---|---|
 | Spec-first | Guide l’implémentation initiale | Le code | Faible | Prototype, petite fonctionnalité, expérimentation |
-| Spec-anchored | Évolue avec le code et reste vérifiable | Spécification et code alignés | Modéré | Produit durable, équipe, API, domaine métier |
-| Spec-as-source | Produit les artefacts exécutables | La spécification | Élevé au départ, industrialisé ensuite | Domaine générable et fortement standardisé |
+| Spec-anchored | Évolue avec le code et reste vérifiable | Le contrat maintenu, vérifié contre le code | Modéré | Produit durable, équipe, API, domaine métier |
+| Spec-as-source | Produit les artefacts exécutables | La spécification | Élevé et dépendant de l’outillage | Domaine générable et fortement standardisé |
 
-En allant vers la droite, la spécification gagne en autorité. En contrepartie, les règles de synchronisation, l’outillage et la discipline doivent être plus solides.
+De spec-first à spec-as-source, la spécification gagne en autorité. En contrepartie, les règles de synchronisation, l’outillage et la discipline doivent être plus solides.
 
-## 🥉 Spec-first : clarifier avant de construire
+## 📝 Spec-first : clarifier avant de construire
 
 Dans une approche **spec-first**, la spécification est écrite avant le code. Elle donne une cible claire au développeur ou à l’agent IA, mais elle peut ensuite cesser d’être maintenue.
 
@@ -45,7 +47,7 @@ Sa limite apparaît dans le temps. Si le comportement change sans mise à jour d
 
 **Exemple :** une équipe teste pendant deux semaines un nouveau parcours d’inscription. Elle spécifie les comportements attendus, fait générer un prototype, puis conserve uniquement le code si l’expérience est concluante.
 
-## 🥈 Spec-anchored : garder le contrat vivant
+## ⚓ Spec-anchored : garder le contrat vivant
 
 Dans l’approche **spec-anchored**, spécification et code évoluent ensemble. Une modification de comportement implique de mettre à jour le contrat et l’implémentation.
 
@@ -55,7 +57,7 @@ L’alignement peut être contrôlé par :
 - des tests d’acceptation ;
 - des tests de contrat pour les API ;
 - des vérifications dans la CI ;
-- une revue exigeant le changement conjoint de la spec et du code.
+- une règle de revue imposant la mise à jour conjointe de la spécification et du code.
 
 Cette approche convient à la majorité des systèmes de production. Elle offre une documentation suffisamment fiable pour les équipes, les parties prenantes et les agents IA, sans imposer que tout le code soit généré.
 
@@ -67,23 +69,23 @@ Elle est particulièrement pertinente lorsque :
 - le domaine métier contient des règles sensibles ;
 - les régressions ont un coût important.
 
-Le principal risque n’est pas technique, mais organisationnel : si la mise à jour de la spécification reste facultative, l’ancre finit par dériver. Une spec-anchored sans contrôle automatisé ni règle de revue peut rapidement redevenir une simple documentation.
+Le principal risque n’est pas technique, mais organisationnel : si la mise à jour de la spécification reste facultative, l’ancre finit par dériver. Une approche spec-anchored sans contrôle automatique ou règle de revue systématique peut redevenir une simple documentation.
 
 **Exemple :** une API publique est décrite par OpenAPI. Toute modification du contrat est examinée, testée et publiée en même temps que l’implémentation. Les agents de développement utilisent cette description à chaque intervention.
 
-## 🥇 Spec-as-source : modifier le modèle, régénérer le système
+## 🏭 Spec-as-source : modifier le modèle, régénérer le système
 
 Avec **spec-as-source**, la spécification devient l’artefact que les humains modifient directement. Le code est généré et ne doit pas être corrigé manuellement, car toute régénération effacerait la modification.
 
 L’idée existe déjà dans plusieurs domaines :
 
-- clients et serveurs générés depuis OpenAPI ;
+- clients, contrats et squelettes de serveurs générés depuis OpenAPI ;
 - schémas de données transformés en modèles ;
-- infrastructure générée depuis un modèle déclaratif ;
-- interfaces produites depuis un design system ;
-- plateformes low-code fondées sur un modèle de domaine.
+- infrastructure générée depuis un modèle déclaratif lorsqu’il reste l’artefact modifié ;
+- composants d’interface générés depuis un schéma de design formalisé ;
+- plateformes low-code lorsque le modèle de domaine est réellement modifié puis régénéré.
 
-L’approche devient attractive lorsque le domaine peut être décrit avec un langage suffisamment expressif et que la génération est déterministe, testable et reproductible.
+L’approche devient pertinente lorsque le domaine peut être décrit avec un langage suffisamment expressif et que la génération est déterministe, testable et reproductible.
 
 Elle demande cependant des garanties fortes :
 
@@ -133,7 +135,7 @@ Vous pouvez orienter le choix avec quatre questions :
 
 4. **Le domaine est-il assez standardisé pour générer le code de façon reproductible ?** Si oui, évaluez spec-as-source sur un périmètre limité.
 
-Pour un produit classique en production, ma recommandation par défaut est **spec-anchored**. C’est le meilleur compromis entre confiance, souplesse et effort de maintenance.
+Pour un produit durable développé par plusieurs intervenants, **spec-anchored** constitue souvent le compromis le plus praticable entre confiance, souplesse et effort de maintenance.
 
 ## 🔄 Une même organisation peut combiner les trois
 
