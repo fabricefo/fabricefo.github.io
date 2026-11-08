@@ -5,7 +5,7 @@ author: fabrice
 description: "Un plan concret pour transformer une équipe de développement avec l’IA sans confondre licences, productivité, qualité et gouvernance."
 date: 2026-11-08
 image: assets/images/equipe-ingenierie-ai-first.jpg
-categories: [IA]
+categories: ai
 tags: [IA, ingénierie logicielle, DevOps, gouvernance, management]
 ---
 

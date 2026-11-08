@@ -2,7 +2,7 @@
 layout: post
 title: "Spec-Driven Development : pourquoi les agents IA ont besoin de contrats, pas de prompts vagues"
 date: 2026-09-13 07:00:00 +0200
-categories: [Développement]
+categories: dev
 tags: [IA, développement, SDD, agents IA, qualité logicielle]
 image: assets/images/spec-driven-development-agents-ia.jpg
 ---

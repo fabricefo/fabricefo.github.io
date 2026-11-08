@@ -4,7 +4,7 @@ title: "AIOps : comprendre comment l'IA transforme les opérations IT"
 description: "Définition, fonctionnement, cas d'usage, bénéfices et limites de l'AIOps pour mieux exploiter les données produites par les systèmes IT."
 date: 2026-09-09
 image: assets/images/aiops-comprendre-operations-it.jpg
-categories: [AI]
+categories: ai
 tags: [AIOps, intelligence-artificielle, observabilite, operations-IT, automatisation]
 ---
 

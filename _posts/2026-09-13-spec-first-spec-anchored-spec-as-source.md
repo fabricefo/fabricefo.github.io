@@ -2,7 +2,7 @@
 layout: post
 title: "Spec-first, spec-anchored ou spec-as-source : quelle approche de SDD choisir ?"
 date: 2026-09-13 07:05:00 +0200
-categories: [Développement]
+categories: dev
 tags: [SDD, architecture logicielle, IA, documentation, qualité logicielle]
 image: assets/images/spec-first-spec-anchored-spec-as-source.jpg
 ---

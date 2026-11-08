@@ -2,7 +2,7 @@
 layout: post
 title: "Mettre le Spec-Driven Development en pratique avec des agents IA"
 date: 2026-09-13 07:10:00 +0200
-categories: [Développement]
+categories: dev
 tags: [SDD, agents IA, workflow, tests logiciels, ingénierie logicielle]
 image: assets/images/workflow-sdd-agents-ia.jpg
 ---

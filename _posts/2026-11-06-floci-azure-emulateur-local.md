@@ -5,7 +5,7 @@ author: fabrice
 description: "Présentation de Floci for Azure, un émulateur local open source qui expose 32 services Azure pour le développement, les tests et la CI."
 date: 2026-11-06
 image: assets/images/floci-azure-emulateur-local.jpg
-categories: [Azure]
+categories: cloud
 tags: [Azure, Floci, émulation, tests, DevOps]
 ---
 

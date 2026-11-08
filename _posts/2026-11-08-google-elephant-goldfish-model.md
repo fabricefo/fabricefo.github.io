@@ -3,6 +3,7 @@ title: "Google Elephant-Goldfish Model : concevoir avant de coder avec des agent
 date: 2026-11-08
 image: assets/images/google-elephant-goldfish-model.jpg
 description: "Découverte d’Elephant-Goldfish Model, le plugin open source de Google qui sépare contexte long, conception et revue critique par des sous-agents au contexte neuf."
+categories: ai
 tags: [IA, Développement, Open Source, SDD, Agents IA]
 ---
 

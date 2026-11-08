@@ -5,7 +5,7 @@ author: fabrice
 description: "Comparatif pratique entre Keycloak et Ory : architecture, expérience de connexion, exploitation, fédération d'identité et autorisation."
 date: 2026-09-17
 image: assets/images/keycloak-vs-ory-choisir-iam.jpg
-categories: [Sécurité]
+categories: dev
 tags: [Keycloak, Ory, IAM, authentification, cybersécurité]
 ---
 

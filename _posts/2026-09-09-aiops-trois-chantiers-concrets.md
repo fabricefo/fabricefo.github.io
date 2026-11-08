@@ -4,7 +4,7 @@ title: "AIOps : trois chantiers concrets pour passer à l'action"
 description: "Une méthode pratique pour fiabiliser les données, choisir un premier cas d'usage et automatiser progressivement une démarche AIOps."
 date: 2026-09-09
 image: assets/images/aiops-trois-chantiers-concrets.jpg
-categories: [AI]
+categories: ai
 tags: [AIOps, observabilite, automatisation, SRE, operations-IT]
 ---
 

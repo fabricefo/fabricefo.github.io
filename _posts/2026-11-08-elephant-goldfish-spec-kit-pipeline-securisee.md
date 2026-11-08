@@ -3,6 +3,7 @@ title: "Elephant-Goldfish et GitHub Spec Kit : construire une pipeline SDD compl
 date: 2026-11-08
 image: assets/images/elephant-goldfish-spec-kit-pipeline.jpg
 description: "Une architecture concrète pour combiner Elephant-Goldfish Model et GitHub Spec Kit, du bootstrap documentaire au contrôle de dérive, avec validations humaines et garde-fous de sécurité."
+categories: ai
 tags: [IA, GitHub, SDD, Sécurité, DevOps]
 ---
 
